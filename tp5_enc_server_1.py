@@ -1,10 +1,10 @@
 import socket
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-sock.bind(('127.0.0.1', 9999))
+sock.bind(('10.1.1.2', 8888))
 sock.listen()
 
-print("le serveur est en attente de connexion sur le port 9999")
+print("le serveur est en attente de connexion sur le port 8888")
 
 client, client_addr = sock.accept()
 
