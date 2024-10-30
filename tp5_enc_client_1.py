@@ -4,7 +4,7 @@ sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 sock.connect(('127.0.0.1', 9999))
 
 # on récup une string saisie par l'utilisateur
-msg = input('Enter a message: ')
+msg = input('Entrer un message: ')
 
 # on encode le message explicitement en UTF-8 pour récup un tableau de bytes
 encoded_msg = msg.encode('utf-8')
@@ -20,4 +20,6 @@ payload = header + encoded_msg
 
 # on peut envoyer ça sur le réseau
 sock.send(payload)
+print(f"Envoyé au serveur: {msg}")
+
 sock.close()
