@@ -1,7 +1,7 @@
 import socket
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-sock.bind(('10.1.1.2', 8888))
+sock.bind(('127.0.0.1', 9999))
 sock.listen()
 client, client_addr = sock.accept()
 

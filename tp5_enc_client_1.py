@@ -1,7 +1,7 @@
 import socket 
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-sock.connect(('10.1.1.2', 8888))
+sock.connect(('127.0.0.1', 9999))
 
 # on récup une string saisie par l'utilisateur
 msg = input('Enter a message: ')
