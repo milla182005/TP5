@@ -1,7 +1,7 @@
 import socket 
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-sock.connect(('10.1.1.2', 9999))
+sock.connect(('10.1.1.2', 8889))
 sock.send('Hello' .encode())
 
 data = sock.recv(1024)
@@ -29,3 +29,4 @@ print(sock_data.decode())
 # on peut envoyer ça sur le réseau
 sock.send(payload)
 sock.close()
+
