@@ -30,4 +30,3 @@ print(sock_data.decode())
 sock.send(payload)
 sock.close()
 
-
