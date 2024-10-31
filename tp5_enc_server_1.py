@@ -18,7 +18,7 @@ while True:
         break
 
     # On lit la valeur
-    msg_len = int.from_bytes(header[0:4], byteorder='big')
+    msg_len = int.from_bytes(header, byteorder='big')
 
     print(f"Lecture des {msg_len} prochains octets")
 
