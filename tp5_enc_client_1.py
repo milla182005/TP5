@@ -2,12 +2,14 @@ import socket
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 sock.connect(('10.1.1.2', 8889))
+
 sock.send('Hello' .encode())
 
 data = sock.recv(1024)
+print(data.decode())
 
 # on récup une string saisie par l'utilisateur
-msg = input('Calcul à envoyer: ')
+msg = input('Calcul à envoyer (ex: "3 + 3"): ')
 
 sock.send(msg.encode())
 
@@ -28,5 +30,9 @@ print(sock_data.decode())
 
 # on peut envoyer ça sur le réseau
 sock.send(payload)
+
+result = sock.recv(1024)
+print(f"Résultat reçu du serveur : {result.decode()}")
+
 sock.close()
 
