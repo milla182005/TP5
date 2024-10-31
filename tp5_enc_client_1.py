@@ -18,7 +18,6 @@ header = msg_len.to_bytes(4, byteorder='big')
 
 payload = header + encoded_msg
 
-
 sock_data = sock.recv(1024)
 print(sock_data.decode())
 
