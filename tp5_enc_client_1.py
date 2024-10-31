@@ -29,3 +29,5 @@ print(sock_data.decode())
 # on peut envoyer ça sur le réseau
 sock.send(payload)
 sock.close()
+
+
