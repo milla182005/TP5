@@ -33,6 +33,5 @@ sock.send(payload)
 
 result = sock.recv(1024)
 print(f"Résultat reçu du serveur : {result.decode()}")
-
 sock.close()
 
