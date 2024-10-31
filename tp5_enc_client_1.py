@@ -1,7 +1,7 @@
 import socket 
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-sock.connect(('127.0.0.1', 9999))
+sock.connect(('10.1.1.2', 9999))
 sock.send('Hello' .encode())
 
 data = sock.recv(1024)
